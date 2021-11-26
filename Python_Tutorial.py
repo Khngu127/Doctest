@@ -1,18 +1,21 @@
-#   Sample test cases with doctest
-def mul(a, b):
+class Item(object):
+    """Base Item Class
+
+    >>> item01 = Item("sword", 150)
+    >>> print item01
+    gobbly gook
     """
-    >>> mul(3, 4)
-    12
-    >>> mul('b', 6)
-    'bbbbbb'
-    """
-    return a * b
-    
-def add(a, b):
-    """
-    >>> add(3, 4)
-    7
-    >>> mul('b', 'c')
-    'bc'
-    """
-    return a + b
+    def__init__(self, name, value):
+    self.name = 'item' if name is None else name
+    numeric = (int, float, long)
+    self.value = 0 if not isinstance(value, numeric) else value
+
+    def __repr__(self):
+        class_name = self._class__.__name__
+        name = self.name
+        value = self.value
+        return "<{} {}({})>".format(class_name, name, value)
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
