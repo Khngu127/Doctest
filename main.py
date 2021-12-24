@@ -1,8 +1,8 @@
 def sum(numbers):
     """Returns the sum of all numbers in a list with 1 pass and 1 fail
-    >>> sum([1,2,3])
-    6
-    >>> sum([5,8,13])
+    >>> sum([5,2,3])
+    10
+    >>> sum([9,8,13])
     25
     """
     total = 0
